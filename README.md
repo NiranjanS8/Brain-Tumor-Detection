@@ -12,13 +12,13 @@ Model Training (BT.ipynb): A Jupyter notebook that handles the training of a CNN
 Web Application (app.py): A Flask-based interface where users can upload MRI images and receive predictions in real-time.
 
 📂 Project Structure
-├── app.py                  # Flask app for image upload and prediction
-├── BT.ipynb                # Jupyter notebook for training the model
-├── my_model.keras          # Trained model file (not included, must be generated)
-├── templates/
-│   └── index.html          # HTML template for the web UI
-├── static/
-│   └── uploads/            # Folder to store uploaded images
+├── app.py                  # Flask app for image upload and prediction <br>
+├── BT.ipynb                # Jupyter notebook for training the model  <br>
+├── my_model.keras          # Trained model file (not included, must be generated)  <br>
+├── templates/         <br>
+│   └── index.html          # HTML template for the web UI       <br>
+├── static/  <br>
+│   └── uploads/            # Folder to store uploaded images    <br>
 
 Model Details
  Input size: 150x150 RGB images
