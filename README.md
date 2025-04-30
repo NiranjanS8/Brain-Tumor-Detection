@@ -28,10 +28,10 @@ Model Details
 • Metrics: Accuracy  <br>
 
 📌 Features
-• Upload MRI scans through the browser
-• Classifies the image into one of four categories
-• Displays predicted class and confidence
-• Clean, minimal web UI
+• Upload MRI scans through the browser  <br>
+• Classifies the image into one of four categories  <br>
+• Displays predicted class and confidence  <br>
+• Clean, minimal web UI <br>
 
 📁 Dataset
 • You can use datasets like the Brain Tumor Dataset from Kaggle for training.
