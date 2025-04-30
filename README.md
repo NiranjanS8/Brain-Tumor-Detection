@@ -7,9 +7,9 @@ Built using TensorFlow/Keras for model development and Flask for web deployment,
 
 The project consists of two main components:
 
-Model Training (BT.ipynb): A Jupyter notebook that handles the training of a CNN model on a brain tumor dataset.
+• Model Training (BT.ipynb): A Jupyter notebook that handles the training of a CNN model on a brain tumor dataset.
 
-Web Application (app.py): A Flask-based interface where users can upload MRI images and receive predictions in real-time.
+• Web Application (app.py): A Flask-based interface where users can upload MRI images and receive predictions in real-time.
 
 📂 Project Structure
 ├── app.py                  # Flask app for image upload and prediction <br>
@@ -21,20 +21,17 @@ Web Application (app.py): A Flask-based interface where users can upload MRI ima
 │   └── uploads/            # Folder to store uploaded images    <br>
 
 Model Details
- Input size: 150x150 RGB images
- Output: 4 classes
- Framework: TensorFlow / Keras
- Loss: Categorical Crossentropy
- Metrics: Accuracy
+• Input size: 150x150 RGB images <br>
+• Output: 4 classes <br>
+• Framework: TensorFlow / Keras <br>
+• Loss: Categorical Crossentropy  <br>
+• Metrics: Accuracy  <br>
 
 📌 Features
-Upload MRI scans through the browser
-
-Classifies the image into one of four categories
-
-Displays predicted class and confidence
-
-Clean, minimal web UI
+• Upload MRI scans through the browser
+• Classifies the image into one of four categories
+• Displays predicted class and confidence
+• Clean, minimal web UI
 
 📁 Dataset
-You can use datasets like the Brain Tumor Dataset from Kaggle for training.
+• You can use datasets like the Brain Tumor Dataset from Kaggle for training.
