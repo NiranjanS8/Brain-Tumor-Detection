@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0d755a;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        form label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .custom-file-upload {
+            display: inline-block;
+            background-color: #0d755a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #0d755a;
+        }
+
+        form input[type="file"] {
+            display: none;
+        }
+
+        form button {
+            background-color: #00ae46;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .result h2 {
+            color: #0d755a;
+        }
+
+        .result img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+    text-align: center;
+    position: fixed; /* Keeps the footer fixed at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Ensures it spans the full width of the page */
+    padding: 10px 0; /* Padding for better spacing */
+    font-size: 14px;
+    color: #555;
+    background-color: #f4f4f4;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for better visual separation */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Brain Tumor Detection</h1>
+    </header>
+    <form method="POST" enctype="multipart/form-data" action="/predict">
+        <label class="custom-file-upload">
+            <input type="file" id="file" name="file" accept="image/*" required>
+            Choose File
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    {% if show_result %}
+    <div class="result">
+        <h2>Prediction Result</h2>
+        <img src="{{ image_url }}" alt="Uploaded Image">
+        <p><strong>Type:</strong> {{ predicted_class }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}%</p>
+    </div>
+    {% endif %}
+    <footer>
+        &copy; 2024 Brain Tumor Detection Project | 
+        <a href="/aboutus.html" style="color: #0d755a; text-decoration: none;">About Us</a>
+    </footer>
+    
+</body>
+</html>
